@@ -1,11 +1,7 @@
-import GameStory.GameStory;
+import gameStory.GameStory;
 import player.Player;
-import rooms.EmptyRoom;
-import rooms.EnemyRoom;
 import rooms.Room;
-import rooms.TreasureRoom;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 

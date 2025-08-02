@@ -1,6 +1,6 @@
 package rooms;
 
-import GameStory.GameStory;
+import gameStory.GameStory;
 import gameObjects.GameObject;
 import gameObjects.Treasures;
 import player.Player;

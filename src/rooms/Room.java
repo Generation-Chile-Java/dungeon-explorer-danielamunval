@@ -1,6 +1,6 @@
 package rooms;
 
-import GameStory.GameStory;
+import gameStory.GameStory;
 import player.Player;
 
 import java.util.ArrayList;

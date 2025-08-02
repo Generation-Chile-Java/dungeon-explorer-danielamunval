@@ -107,25 +107,37 @@ Antes de comenzar, deberás elegir a tu personaje. Cada clase tiene habilidades 
 DungeonGame/
 │
 ├── Main.java
-├── game/
-│   ├── Player.java
-│   ├── Inventory.java
-│   └── ...otros elementos del jugador
-├── enemy/
-│   ├── Enemy.java
-│   └── ...subclases de enemigos
-├── room/
-│   ├── Room.java
-│   └── ...clases para salas y eventos
-├── utils/
-│   └── TextStyles.java (para formato de consola)
-└── assets/
-    └── ASCII art, preguntas, tesoros (según estructura implementada)
+├── enemies/
+│   ├── Enemy
+├── gameObjects
+│   ├── GameObject
+│   ├── GoldenKey
+│   ├── ObjectActions 
+│   ├── Potion
+│   └── Treasures  
+├── gameStory/
+│   └── GameStory
+├── player/
+│   ├── Hunter
+│   ├── Player
+│   ├── PlayerActions 
+│   └── Warrior  
+├── rooms/
+│   ├── EmptyRoom
+│   ├── EnemyRoom
+│   ├── Room
+│   ├── RoomActions 
+│   └── TreasureRoom  
+├── Trivia/
+│   └── Trivia
+
 ````
 
 ## ✨ Autoría
 
-Este proyecto fue desarrollado de forma individual como parte de mi proceso de aprendizaje en Java y programación orientada a objetos. Fue pensado como una forma creativa y práctica de aplicar conceptos fundamentales, mientras experimentaba con narrativas interactivas y mecánicas simples de juego.
+Este proyecto fue desarrollado de forma individual como parte de mi proceso de aprendizaje en Java y programación orientada a objetos. 
+Mi inspiración fue basada en el juego Dungeons&Dragons, pero con mecánicas más simples.
+Fue pensado como una forma creativa y práctica de aplicar conceptos fundamentales, mientras experimentaba con narrativas interactivas y mecánicas simples de juego.
 
 ---
 

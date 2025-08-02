@@ -1,6 +1,6 @@
 package gameObjects;
 
-import GameStory.GameStory;
+import gameStory.GameStory;
 import player.Player;
 
 public class GoldenKey extends GameObject {

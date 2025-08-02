@@ -1,12 +1,9 @@
 package player;
 
-import enemies.Enemie;
+import enemies.Enemy;
 import gameObjects.GameObject;
-import rooms.EmptyRoom;
-import rooms.EnemyRoom;
 import rooms.Room;
-import rooms.TreasureRoom;
-import GameStory.GameStory;
+import gameStory.GameStory;
 
 import java.util.List;
 
@@ -14,7 +11,7 @@ public class Player implements PlayerActions {
 
     private String nombreJugador;
     private String nivelDificultad;
-    private List<Enemie> enemigosEnfrentados;
+    private List<Enemy> enemigosEnfrentados;
     private Integer vidasJugador;
     private List<GameObject> inventory;
     private Room salaActual;
@@ -22,11 +19,11 @@ public class Player implements PlayerActions {
     public Player() {
     }
 
-    public List<Enemie> getEnemigosEnfrentados() {
+    public List<Enemy> getEnemigosEnfrentados() {
         return enemigosEnfrentados;
     }
 
-    public void setEnemigosEnfrentados(List<Enemie> enemigosEnfrentados) {
+    public void setEnemigosEnfrentados(List<Enemy> enemigosEnfrentados) {
         this.enemigosEnfrentados = enemigosEnfrentados;
     }
 
@@ -90,7 +87,7 @@ public class Player implements PlayerActions {
     }
 
     @Override
-    public void atacarEnemigo(Player player, Enemie enemie, GameStory gameStory) {
+    public void atacarEnemigo(Player player, Enemy enemie, GameStory gameStory) {
         gameStory.playerAtaca(player, enemie, gameStory);
         enemie.setVidas(enemie.getVidas() - 1);
     }

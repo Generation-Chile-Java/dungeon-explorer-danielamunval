@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class Enemie {
+public class Enemy {
 
     private String tipo;
     private int vidas;
@@ -45,11 +45,11 @@ public class Enemie {
             "Runestone Golem"
     );
 
-    public Enemie(String tipo) {
+    public Enemy(String tipo) {
         this.tipo = tipo;
     }
 
-    public Enemie() {
+    public Enemy() {
 
     }
 
@@ -65,8 +65,8 @@ public class Enemie {
         this.vidas = vidas;
     }
 
-    public static Enemie generarEnemigo(String idioma, String dificultad) {
-        Enemie enemie = new Enemie();
+    public static Enemy generarEnemigo(String idioma, String dificultad) {
+        Enemy enemie = new Enemy();
         Random random = new Random();
         String tipoSeleccionado = "";
         if (idioma.equals("ES")) {

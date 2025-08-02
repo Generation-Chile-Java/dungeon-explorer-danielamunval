@@ -1,7 +1,7 @@
 package rooms;
 
-import GameStory.GameStory;
-import enemies.Enemie;
+import gameStory.GameStory;
+import enemies.Enemy;
 import player.Player;
 import trivia.Trivia;
 
@@ -20,9 +20,9 @@ public class EnemyRoom extends Room {
         super.interaccionEnSala(player, room, gameStory);
         player.ingresarASala(room, gameStory);
 
-        Enemie enemie = Enemie.generarEnemigo(gameStory.getIdioma(), player.getNivelDificultad());
+        Enemy enemie = Enemy.generarEnemigo(gameStory.getIdioma(), player.getNivelDificultad());
         gameStory.apareceEnemigo(enemie.getTipo());
-        List<Enemie> enemigos = player.getEnemigosEnfrentados();
+        List<Enemy> enemigos = player.getEnemigosEnfrentados();
         if (enemigos == null || enemigos.isEmpty()) {
             enemigos = new ArrayList<>();
         }
@@ -93,7 +93,7 @@ public class EnemyRoom extends Room {
         gameStory.enterContinuar();
     }
 
-    private void accionSaltarTurno(Player player, Enemie enemie, GameStory gameStory, Scanner teclado) {
+    private void accionSaltarTurno(Player player, Enemy enemie, GameStory gameStory, Scanner teclado) {
         gameStory.playerSaltaTurno(player, enemie, gameStory, teclado);
         player.setVidasJugador(player.getVidasJugador() - 1);
     }
@@ -124,7 +124,7 @@ public class EnemyRoom extends Room {
         return Integer.valueOf(accion);
     }
 
-    private boolean accionAtacar(Player player, Enemie enemie, GameStory gameStory, Scanner teclado) {
+    private boolean accionAtacar(Player player, Enemy enemie, GameStory gameStory, Scanner teclado) {
 
         Trivia trivia = Trivia.generarPregunta(gameStory.getIdioma());
         boolean resultadoRonda;
@@ -165,7 +165,7 @@ public class EnemyRoom extends Room {
         return resultadoRonda;
     }
 
-    private void accionInventario(Player player, Enemie enemie, GameStory gameStory, Scanner teclado) {
+    private void accionInventario(Player player, Enemy enemie, GameStory gameStory, Scanner teclado) {
         gameStory.eleccionDeObjeto(player, gameStory, teclado);
         gameStory.enterContinuar();
     }

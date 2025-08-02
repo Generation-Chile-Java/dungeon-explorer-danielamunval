@@ -1,7 +1,7 @@
 package player;
 
-import GameStory.GameStory;
-import enemies.Enemie;
+import gameStory.GameStory;
+import enemies.Enemy;
 
 public class Hunter extends Player {
 
@@ -18,7 +18,7 @@ public class Hunter extends Player {
     }
 
     @Override
-    public void atacarEnemigo(Player player, Enemie enemie, GameStory gameStory) {
+    public void atacarEnemigo(Player player, Enemy enemie, GameStory gameStory) {
         gameStory.playerAtaca(player, enemie, gameStory);
         enemie.setVidas(enemie.getVidas() - 1);
     }

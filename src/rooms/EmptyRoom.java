@@ -1,7 +1,6 @@
 package rooms;
 
-import GameStory.GameStory;
-import enemies.Enemie;
+import gameStory.GameStory;
 import player.Player;
 
 import java.util.Scanner;

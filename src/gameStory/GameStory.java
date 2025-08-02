@@ -1,10 +1,9 @@
-package GameStory;
+package gameStory;
 
-import enemies.Enemie;
+import enemies.Enemy;
 import gameObjects.GameObject;
 import gameObjects.GoldenKey;
 import gameObjects.Potion;
-import gameObjects.Treasures;
 import player.Hunter;
 import player.Player;
 import player.Warrior;
@@ -239,13 +238,13 @@ public class GameStory {
         System.out.print("=> ");
     }
 
-    public void comienzaCombate(Player player, Enemie enemie) {
+    public void comienzaCombate(Player player, Enemy enemie) {
         imprimirSegunIdioma("¡Comienza el combate entre " + player.getNombreJugador() + " y " + enemie.getTipo() + "!",
                 "The fight between" + player.getNombreJugador() + " and " + enemie.getTipo() + " begins");
         enterContinuar();
     }
 
-    public void rondas(Player player, Enemie enemie, GameStory gameStory, int ronda) {
+    public void rondas(Player player, Enemy enemie, GameStory gameStory, int ronda) {
         System.out.println("\n══════════════════════════════════════");
         imprimirSegunIdioma("      ⚔️  RONDA " + ronda + " / 3  ⚔️", "      ⚔️  ROUND " + ronda + " / 3  ⚔️");
         System.out.println("══════════════════════════════════════\n");
@@ -277,13 +276,13 @@ public class GameStory {
                 player.getNombreJugador() + " " + player.claseJugador(player, gameStory) + "wins the battle");
     }
 
-    public void player3RondasPerdidas(Player player, Enemie enemie) {
+    public void player3RondasPerdidas(Player player, Enemy enemie) {
         String ES = "Sientes que después de esa última ronda la confusión es mayor 💭, y el cansancio se vuelve mayor... \nLa mazmorra consume toda tu energia y con ello todas tus vidas... 💔💀";
         String EN = "You feel that after that last round, the confusion is greater 💭, and the exhaustion grows stronger...\nThe dungeon drains all your energy, and with it, all your lives... 💔💀";
         imprimirSegunIdioma(ES, EN);
     }
 
-    public void playerAtaca(Player player, Enemie enemie, GameStory gameStory) {
+    public void playerAtaca(Player player, Enemy enemie, GameStory gameStory) {
         String ES = "";
         String EN = "";
 
@@ -309,12 +308,12 @@ public class GameStory {
         imprimirSegunIdioma(ES, EN);
     }
 
-    public void enemieAtaca(Enemie enemie, Player player) {
+    public void enemieAtaca(Enemy enemie, Player player) {
         imprimirSegunIdioma(RED + "¡Has fallado! " + enemie.getTipo() + " ataca y pierdes una vida 💔" + RESET,
                 RED + "You failed! " + enemie.getTipo() + " 💀 attacks and you lose a life 💔" + RESET);
     }
 
-    public void playerSaltaTurno(Player player, Enemie enemie, GameStory gameStory, Scanner teclado) {
+    public void playerSaltaTurno(Player player, Enemy enemie, GameStory gameStory, Scanner teclado) {
         String ES = RED + player.getNombreJugador() + " " + player.claseJugador(player, gameStory) + " parece confundido 😵‍💫 " +
                 enemie.getTipo() + " 💀 aprovecha la distracción y ataca, pierdes una vida! 💔" + RESET;
         String EN = RED + player.getNombreJugador() + " " + player.claseJugador(player, gameStory) + " looks confused 😵‍💫 " +
@@ -322,7 +321,7 @@ public class GameStory {
         imprimirSegunIdioma(ES, EN);
     }
 
-    public void termina3RondasSinMorir(Player player, Enemie enemie, GameStory gameStory) {
+    public void termina3RondasSinMorir(Player player, Enemy enemie, GameStory gameStory) {
         String nombrePlayer = player.getNombreJugador() + " " + player.claseJugador(player, gameStory);
         String ES = nombrePlayer + " logras distraer a " + enemie.getTipo() + ", abandonas la sala con sigilo y te adentras en la siguiente.";
         String EN = nombrePlayer + " manages to distract " + enemie.getTipo() + ", you quietly leave the room and head into the next one.";
@@ -408,7 +407,7 @@ public class GameStory {
         String EN = "";
 
         List<GameObject> objetos = player.getInventory() != null ? player.getInventory() : new ArrayList<>();
-        List<Enemie> enemigos = player.getEnemigosEnfrentados() != null ? player.getEnemigosEnfrentados() : new ArrayList<>();
+        List<Enemy> enemigos = player.getEnemigosEnfrentados() != null ? player.getEnemigosEnfrentados() : new ArrayList<>();
 
         ES = "\n🎉 ¡" + nombrePlayer + " ha logrado sobrevivir a los horrores de la mazmorra y has salido con vida! 🗡️🏰";
         EN = "\n🎉 " + nombrePlayer + " has survived the horrors of the dungeon and escaped alive! 🗡️🏰";
@@ -420,7 +419,7 @@ public class GameStory {
 
         if (!enemigos.isEmpty()) {
             int x = 1;
-            for (Enemie enemie : enemigos) {
+            for (Enemy enemie : enemigos) {
                 System.out.println("   " + x + ". " + enemie.getTipo());
                 x++;
             }
