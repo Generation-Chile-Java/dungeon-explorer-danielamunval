@@ -1,4 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vov8w5Ad)
 
 **Objetivo del Ejercicio**
 
@@ -42,7 +41,7 @@ El jugador debe explorar una mazmorra compuesta de diferentes tipos de salas. Ca
 
 Paso 1: Crear las interfaces básicas
   - Define una interfaz Room para representar una sala en la mazmorra.
-  - Define una interfaz GameObject para representar objetos interactuables en la mazmorra.
+  - Define una interfaz gameObjects.gameObjects para representar objetos interactuables en la mazmorra.
 
 Paso 2: Crear la clase Player
   - Define una clase Player que encapsule los datos y comportamientos del jugador.
@@ -63,3 +62,72 @@ Paso 4: Crear la clase principal del juego
   - Asegúrate de manejar adecuadamente las interacciones entre el jugador y los diferentes tipos de salas.
   - Considera agregar más salas y enemigos para hacer el juego más interesante.
   - Puedes implementar características adicionales como la posibilidad de que el jugador use objetos del inventario.
+
+
+---
+
+# 🏰 Dungeon Game ⚜️
+
+¡Bienvenid@ a *Dungeon Game*!  
+Un juego por consola en Java donde te adentras en una mazmorra llena de misterios, criaturas y decisiones cruciales.
+
+## 🎮 Descripción
+
+En este juego recorrerás una serie de salas dentro de una antigua mazmorra.  
+Tu misión: llegar al final y obtener el gran tesoro escondido.
+
+Antes de comenzar, deberás elegir a tu personaje. Cada clase tiene habilidades únicas que influirán en cómo enfrentas los desafíos que se presenten: batallas contra enemigos, acertijos que ponen a prueba tu ingenio, y la posibilidad de encontrar tesoros que podrás guardar en tu inventario.
+
+## ⚙️ Características principales
+
+- Sistema de selección de personaje (con clases y atributos únicos).
+- Exploración de salas con eventos aleatorios.
+- Combates contra enemigos con arte de emojis.
+- Preguntas y acertijos cortos que permiten continuar o desvían tu camino.
+- Sistema de inventario con objetos y tesoros recolectados.
+- Final con recompensa si completas el recorrido.
+
+## 🛠️ Tecnologías usadas
+
+- **Lenguaje:** Java 21
+- **Tipo de aplicación:** Consola
+- **Paradigma:** Programación Orientada a Objetos (POO)
+- **IDE recomendado:** IntelliJ IDEA (o cualquier IDE que soporte proyectos Java)
+
+## 🚀 Cómo ejecutar el juego
+
+1. Clona este repositorio o descarga el proyecto.
+2. Abre el proyecto en tu IDE de preferencia.
+3. Asegúrate de tener configurado Java 21.
+4. Ejecuta el archivo `Main.java` ubicado en el paquete principal.
+5. Todo el juego se maneja desde la consola. Sigue las instrucciones que aparecen en pantalla.
+
+## 📁 Estructura del proyecto
+````
+DungeonGame/
+│
+├── Main.java
+├── game/
+│   ├── Player.java
+│   ├── Inventory.java
+│   └── ...otros elementos del jugador
+├── enemy/
+│   ├── Enemy.java
+│   └── ...subclases de enemigos
+├── room/
+│   ├── Room.java
+│   └── ...clases para salas y eventos
+├── utils/
+│   └── TextStyles.java (para formato de consola)
+└── assets/
+    └── ASCII art, preguntas, tesoros (según estructura implementada)
+````
+
+## ✨ Autoría
+
+Este proyecto fue desarrollado de forma individual como parte de mi proceso de aprendizaje en Java y programación orientada a objetos. Fue pensado como una forma creativa y práctica de aplicar conceptos fundamentales, mientras experimentaba con narrativas interactivas y mecánicas simples de juego.
+
+---
+
+*¡Gracias por jugar!*  
+¿Podrás llegar al final y reclamar el tesoro? 👑
